@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            .topLeft{
+                position: fixed;
+                top: 0;
+                left: 0;
+            }
+
+            .topRight{
+                position: fixed;
+                top: 0;
+                right: 0;
+            }
+
+            .bottomRight{
+                position: fixed;
+                bottom: 0;
+                right: 0;
+            }
+
+            .bottomLeft{
+                position: fixed;
+                bottom: 0;
+                left: 0;
+            }
+    </style>
+    <script>
+            var clickCount = 0;
+            function clickMe()
+            {
+                clickCount= clickCount+1;
+                if(clickCount ==1){
+                document.getElementById("button").classList = "topRight";
+                }
+                else if(clickCount ==2){
+                    document.getElementById("button").classList = "bottomRight";
+                }
+                else if(clickCount ==3){
+                    document.getElementById("button").classList = "bottomLeft";
+                    }
+                else{
+                    document.getElementById("button").classList = "TopLeft";
+                    clickCount = 0;
+
+                }
+            }
+    </script>
+</head>
+<body>
+    <button id="button" onclick="clickMe();">Click On Me</button>
+</body>
+</html>
